@@ -1,0 +1,255 @@
+Not Found: /
+[10/Aug/2016 04:15:51] "GET / HTTP/1.1" 404 2010
+Not Found: /favicon.ico
+[10/Aug/2016 04:15:54] "GET /favicon.ico HTTP/1.1" 404 2043
+Not Found: /music
+[10/Aug/2016 04:16:04] "GET /music HTTP/1.1" 301 0
+[10/Aug/2016 04:16:04] "GET /music/ HTTP/1.1" 200 163
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 10, 2016 - 04:15:22
+Django version 1.9, using settings 'myblog.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Not Found: /
+[10/Aug/2016 07:39:35] "GET / HTTP/1.1" 404 2010
+Not Found: /favicon.ico
+[10/Aug/2016 07:39:35] "GET /favicon.ico HTTP/1.1" 404 2043
+[10/Aug/2016 07:39:37] "GET /music/ HTTP/1.1" 200 0
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 10, 2016 - 07:39:14
+Django version 1.9, using settings 'myblog.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[10/Aug/2016 07:46:37] "GET /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[10/Aug/2016 07:46:37] "GET /admin/ HTTP/1.1" 200 4321
+[10/Aug/2016 07:46:37] "GET /static/admin/css/base.css HTTP/1.1" 200 15897
+[10/Aug/2016 07:46:37] "GET /static/admin/css/dashboard.css HTTP/1.1" 200 434
+[10/Aug/2016 07:46:38] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+[10/Aug/2016 07:46:38] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[10/Aug/2016 07:46:38] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[10/Aug/2016 07:46:38] "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+[10/Aug/2016 07:46:38] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 82564
+[10/Aug/2016 07:46:38] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 80304
+[10/Aug/2016 07:46:38] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 81348
+[10/Aug/2016 07:46:41] "GET /admin/music/album/add/ HTTP/1.1" 200 6818
+[10/Aug/2016 07:46:41] "GET /static/admin/css/forms.css HTTP/1.1" 200 7750
+[10/Aug/2016 07:46:41] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[10/Aug/2016 07:46:41] "GET /static/admin/js/core.js HTTP/1.1" 200 8171
+[10/Aug/2016 07:46:41] "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 363
+[10/Aug/2016 07:46:41] "GET /static/admin/js/urlify.js HTTP/1.1" 200 7693
+[10/Aug/2016 07:46:41] "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1538
+[10/Aug/2016 07:46:41] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 6055
+[10/Aug/2016 07:46:41] "GET /static/admin/css/widgets.css HTTP/1.1" 200 10340
+[10/Aug/2016 07:46:41] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 247597
+[10/Aug/2016 07:46:41] "GET /static/admin/js/actions.js HTTP/1.1" 200 6259
+[10/Aug/2016 07:46:41] "GET /static/admin/js/vendor/xregexp/xregexp.min.js HTTP/1.1" 200 62474
+[10/Aug/2016 07:46:56] "POST /admin/music/album/add/ HTTP/1.1" 200 7070
+[10/Aug/2016 07:46:56] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[10/Aug/2016 07:47:50] "POST /admin/music/album/add/ HTTP/1.1" 302 0
+[10/Aug/2016 07:47:50] "GET /admin/music/album/add/ HTTP/1.1" 200 7016
+[10/Aug/2016 07:47:51] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[10/Aug/2016 07:47:51] "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+[10/Aug/2016 07:48:27] "POST /admin/music/album/add/ HTTP/1.1" 302 0
+[10/Aug/2016 07:48:28] "GET /admin/music/album/ HTTP/1.1" 200 4767
+[10/Aug/2016 07:48:28] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[10/Aug/2016 07:48:28] "GET /static/admin/css/changelists.css HTTP/1.1" 200 6100
+[10/Aug/2016 07:48:28] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+[10/Aug/2016 07:48:31] "GET /admin/ HTTP/1.1" 200 4932
+[10/Aug/2016 07:48:34] "GET /admin/music/album/ HTTP/1.1" 200 4597
+[10/Aug/2016 07:48:34] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+Internal Server Error: /music/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.5/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/sarthak/myblog/music/views.py", line 7, in index
+    for album in all_albums:
+NameError: name 'all_albums' is not defined
+[10/Aug/2016 07:49:04] "GET /music/ HTTP/1.1" 500 65734
+Internal Server Error: /music/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.5/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/sarthak/myblog/music/views.py", line 7, in index
+    for album in all_albums:
+NameError: name 'all_albums' is not defined
+[10/Aug/2016 07:49:04] "GET /music/ HTTP/1.1" 500 65734
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 10, 2016 - 07:46:30
+Django version 1.9, using settings 'myblog.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[10/Aug/2016 07:50:10] "GET /music/ HTTP/1.1" 200 86
+[10/Aug/2016 07:50:11] "GET /music/3/ HTTP/1.1" 200 32
+[10/Aug/2016 07:50:15] "GET /music/4/ HTTP/1.1" 200 32
+[10/Aug/2016 07:50:30] "GET /music/ HTTP/1.1" 200 86
+Not Found: /admin
+[10/Aug/2016 07:50:33] "GET /admin HTTP/1.1" 301 0
+[10/Aug/2016 07:50:33] "GET /admin/ HTTP/1.1" 200 4932
+[10/Aug/2016 07:50:39] "GET /admin/music/album/ HTTP/1.1" 200 4597
+[10/Aug/2016 07:50:39] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[10/Aug/2016 07:50:45] "GET /admin/ HTTP/1.1" 200 4932
+[10/Aug/2016 07:50:48] "GET /admin/music/album/ HTTP/1.1" 200 4597
+[10/Aug/2016 07:50:48] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[10/Aug/2016 07:50:50] "GET /admin/music/album/4/change/ HTTP/1.1" 200 7186
+[10/Aug/2016 07:50:50] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[10/Aug/2016 07:50:54] "GET /admin/music/album/4/history/ HTTP/1.1" 200 2137
+[10/Aug/2016 07:50:58] "GET /admin/music/album/ HTTP/1.1" 200 4597
+[10/Aug/2016 07:50:58] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+Not Found: /
+[10/Aug/2016 07:51:06] "GET / HTTP/1.1" 404 2010
+[10/Aug/2016 07:51:09] "GET /music/ HTTP/1.1" 200 86
+[10/Aug/2016 07:51:11] "GET /music/3/ HTTP/1.1" 200 32
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 10, 2016 - 07:50:08
+Django version 1.9, using settings 'myblog.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[10/Aug/2016 08:15:34] "GET /music/ HTTP/1.1" 200 86
+[10/Aug/2016 08:15:36] "GET /music/4/ HTTP/1.1" 200 104
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 10, 2016 - 08:15:32
+Django version 1.9, using settings 'myblog.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[10/Aug/2016 08:16:49] "GET /music/4/ HTTP/1.1" 200 98
+[10/Aug/2016 08:16:51] "GET /music/3/ HTTP/1.1" 200 85
+Not Found: /music
+[10/Aug/2016 08:17:19] "GET /music HTTP/1.1" 301 0
+[10/Aug/2016 08:17:19] "GET /music/ HTTP/1.1" 200 86
+[10/Aug/2016 08:17:21] "GET /admin/ HTTP/1.1" 200 4932
+[10/Aug/2016 08:17:24] "GET /admin/music/album/ HTTP/1.1" 200 4597
+[10/Aug/2016 08:17:24] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[10/Aug/2016 08:17:25] "GET /admin/ HTTP/1.1" 200 4932
+[10/Aug/2016 08:17:26] "GET /admin/music/song/ HTTP/1.1" 200 3151
+[10/Aug/2016 08:17:26] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[10/Aug/2016 08:18:44] "GET /admin/music/song/add/ HTTP/1.1" 200 7171
+[10/Aug/2016 08:18:44] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[10/Aug/2016 08:19:05] "POST /admin/music/song/add/ HTTP/1.1" 302 0
+[10/Aug/2016 08:19:05] "GET /admin/music/song/add/ HTTP/1.1" 200 7351
+[10/Aug/2016 08:19:05] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[10/Aug/2016 08:19:26] "POST /admin/music/song/add/ HTTP/1.1" 302 0
+[10/Aug/2016 08:19:26] "GET /admin/music/song/add/ HTTP/1.1" 200 7351
+[10/Aug/2016 08:19:26] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[10/Aug/2016 08:19:40] "POST /admin/music/song/add/ HTTP/1.1" 302 0
+[10/Aug/2016 08:19:40] "GET /admin/music/song/add/ HTTP/1.1" 200 7351
+[10/Aug/2016 08:19:40] "GET /admin/jsi18n/ HTTP/1.1" 200 3189
+[10/Aug/2016 08:19:43] "GET /admin/ HTTP/1.1" 200 5787
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 10, 2016 - 08:15:54
+Django version 1.9, using settings 'myblog.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Unhandled exception in thread started by <function check_errors.<locals>.wrapper at 0x7fdd7b009048>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/django/core/management/commands/runserver.py", line 116, in inner_run
+    self.check(display_num_errors=True)
+  File "/usr/local/lib/python3.5/dist-packages/django/core/management/base.py", line 426, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/usr/local/lib/python3.5/dist-packages/django/core/checks/registry.py", line 75, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/usr/local/lib/python3.5/dist-packages/django/core/checks/urls.py", line 10, in check_url_config
+    return check_resolver(resolver)
+  File "/usr/local/lib/python3.5/dist-packages/django/core/checks/urls.py", line 19, in check_resolver
+    for pattern in resolver.url_patterns:
+  File "/usr/local/lib/python3.5/dist-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.5/dist-packages/django/core/urlresolvers.py", line 417, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python3.5/dist-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.5/dist-packages/django/core/urlresolvers.py", line 410, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/sarthak/myblog/myblog/urls.py", line 6, in <module>
+    url(r'^music/',include('music.urls'))
+  File "/usr/local/lib/python3.5/dist-packages/django/conf/urls/__init__.py", line 52, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/sarthak/myblog/music/urls.py", line 2, in <module>
+    from . import views #Including views from the current directory
+  File "/home/sarthak/myblog/music/views.py", line 2, in <module>
+    from .models import Album,Songs
+ImportError: cannot import name 'Songs'
+Performing system checks...
+
+Unhandled exception in thread started by <function check_errors.<locals>.wrapper at 0x7fa0b3724048>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python3.5/dist-packages/django/core/management/commands/runserver.py", line 116, in inner_run
+    self.check(display_num_errors=True)
+  File "/usr/local/lib/python3.5/dist-packages/django/core/management/base.py", line 426, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/usr/local/lib/python3.5/dist-packages/django/core/checks/registry.py", line 75, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/usr/local/lib/python3.5/dist-packages/django/core/checks/urls.py", line 10, in check_url_config
+    return check_resolver(resolver)
+  File "/usr/local/lib/python3.5/dist-packages/django/core/checks/urls.py", line 19, in check_resolver
+    for pattern in resolver.url_patterns:
+  File "/usr/local/lib/python3.5/dist-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.5/dist-packages/django/core/urlresolvers.py", line 417, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python3.5/dist-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.5/dist-packages/django/core/urlresolvers.py", line 410, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/sarthak/myblog/myblog/urls.py", line 6, in <module>
+    url(r'^music/',include('music.urls'))
+  File "/usr/local/lib/python3.5/dist-packages/django/conf/urls/__init__.py", line 52, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/sarthak/myblog/music/urls.py", line 2, in <module>
+    from . import views #Including views from the current directory
+  File "/home/sarthak/myblog/music/views.py", line 2, in <module>
+    from .models import Album,Songs
+ImportError: cannot import name 'Songs'
+Performing system checks...
+

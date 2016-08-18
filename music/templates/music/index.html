@@ -1,0 +1,31 @@
+{% extends 'music/base.html' %}
+
+{% block body %}
+<div class="container-fluid">
+<ul>
+	<h3>My albums: </h3>
+	<div class='row'>
+	{% for album in all_albums %}
+	<div class=col-md-4>
+	<a href='{% url 'music:detail' album.id %}'><img src='{{album.album_logo}}' class='img-rounded ' style='height:300px;width:300px'><p style='padding:10px;color:blue;font-size:20px;font-family:Satisfy'>{{album.album_title}}</p></a>
+	</div>
+	{% endfor %}
+	</div>
+</ul>
+</div>
+	{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
