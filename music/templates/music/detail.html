@@ -1,29 +1,95 @@
 {% extends 'music/base.html' %}
+{% block title %}{{ album.album_title }}{% endblock %}
+{% block albums_active %}active{% endblock %}
 
 {% block body %}
+<div class="container-fluid songs-container">
 
-<div class="container">
-<img src='{{album.album_logo}}' style="height:300px;width:300px" class="img-rounded">
-<h1>{{album.album_title}}</h1>
-<h2 style="font-family:Satisfy">{{album.artist}}</h1>
+    <div class="row">
 
-{% if error_message %}
-	<p><strong>{{error_message}}</strong></p>
-{% endif %}
+        <!-- Left Album Info -->
+        <div class="col-sm-4 col-md-3">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <a href="{% url 'music:detail' album.id %}">
+                        {% if album.album_logo %}
+                            <img src="{{ album.album_logo.url }}" class="img-responsive">
+                        {% else %}
+                            <h3>No image to display</h3>
+                        {% endif %}
+                    </a>
+                    <h1>{{ album.album_title }} <small>{{ album.genre }}</small></h1>
+                    <h2>{{ album.artist }}</h2>
+                </div>
+            </div>
+        </div>
 
-<form action="{% url 'music:favourite' album.id %}" method="post">
-	{% csrf_token %}
-	{% for song in album.song_set.all %}
-		<input type="radio" id="song{{forloop.counter}}" name="song" value="{{song.id}}">
-		<label for="song{{forloop.counter}}">
-			{{ song.song_title }}
-			{% if song.is_favourite %}
-				<img src="http://www.rw-designer.com/icon-image/136-16x16x32.png">
-			{% endif %}
-		</label><br>
-	{% endfor %}
-	<input type="submit" value="Favourite">
-</form>
-	</div>
+<div class="col-sm-8 col-md-9">
+
+            <ul class="nav nav-pills" style="margin-bottom: 10px;">
+                <li role="presentation" class="active"><a href="{% url 'music:detail' album.id %}">View All</a></li>
+                <li role="presentation"><a href="{% url 'music:addSong' album.id %}">Add New Song</a></li>
+            </ul>
+
+            <div class="panel panel-default">
+                <div class="panel-body">
+
+                    <h3>All Songs</h3>
+
+                    {% if error_message %}
+                        <p><strong>{{ error_message }}</strong></p>
+                    {% endif %}
+
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Audio File</th>
+                            <th>Favorite</th>
+                            <th>Actions</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for song in album.song_set.all %}
+                            <tr>
+                                <td>{{ song.song_title }}</td>
+                                <td>
+                                    <a target="_blank" href="{{ song.audio_file.url }}">
+                                        <button type="button" class="btn btn-success btn-xs">
+                                            <span class="glyphicon glyphicon-play"></span>&nbsp; Play
+                                        </button>
+                                    </a>
+                                </td>
+								<td>
+									{% if song.is_favourite %}
+									<span class="glyphicon glyphicon-star"></span>
+									{% endif %}
+								</td>
+                                <td>
+                                    	<a class="btn btn-danger" href="{% url 'music:deleteSong' album.id song.id %}">
+                                            <span class="glyphicon glyphicon-trash"></span>
+                                        </a>
+									<a class="btn btn-success" href="{% url 'music:favouriteSong' album.id song.id %}">
+                                            <span class="glyphicon glyphicon-star"></span>
+                                        </a>
+									<a class="btn btn-default" href="{% url 'music:editSong' album.id song.id %}">
+                                            <span class="glyphicon glyphicon-pencil"></span>
+                                        </a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
 
 	{% endblock %}

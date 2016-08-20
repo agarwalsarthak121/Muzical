@@ -3,11 +3,16 @@
 {% block body %}
 <div class="container-fluid">
 <ul>
-	<h3>My albums: </h3>
 	<div class='row'>
 	{% for album in all_albums %}
 	<div class=col-md-4>
-	<a href='{% url 'music:detail' album.id %}'><img src='{{album.album_logo}}' class='img-rounded ' style='height:300px;width:300px'><p style='padding:10px;color:blue;font-size:20px;font-family:Satisfy'>{{album.album_title}}</p></a>
+				<a class="btn btn-default" href="{% url 'music:edit' album_id=album.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+					<a class="btn btn-danger" href="{% url 'music:delete' album_id=album.pk %}"><span class="glyphicon glyphicon-trash"></span></a>
+	<a class="btn btn-success" href="{% url 'music:favouriteAlbum' album_id=album.pk %}"><span class="glyphicon glyphicon-star"></span></a>
+		<a href='{% url 'music:detail' album.pk %}' class='thumbnail'><img src='{{album.album_logo.url}}' style='height:300px;width:300px'><p style='padding:10px;color:blue;font-size:20px;font-family:Satisfy'><strong>{{album.album_title}}</strong><br>{{album.artist}}</p>
+		<button style="margin:5px" type="button" class="btn btn-primary">View Details</button>
+		{% if album.is_favourite %}<span class="glyphicon glyphicon-star" style="font-size:30px"></span>{% endif %}
+		</a>
 	</div>
 	{% endfor %}
 	</div>

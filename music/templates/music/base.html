@@ -2,7 +2,7 @@
         <html lan="en">
     <head>
             <meta charset="utf-8">
-            <title>Viperr</title>
+            <title>{% block title %}Muzicalberr{% endblock %}</title>
 {% load staticfiles %}
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
 <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
@@ -21,7 +21,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="{% url 'music:index' %}">Musiczzz</a>
+      <a class="navbar-brand" href="{% url 'music:index' %}">Muzicall</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
@@ -29,7 +29,7 @@
 	Albums
 	</a>
 	</li>
-        <li><a href="#"><span class='glyphicon glyphicon-music' aria-hidden='true'></span>&nbsp;
+        <li><a href="/music/songs"><span class='glyphicon glyphicon-music' aria-hidden='true'></span>&nbsp;
 	Songs
 	</a>
 	</li>
@@ -41,8 +41,8 @@
 <button type='submit' class='btn btn-default'>Search</button>
 </form>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="/admin"><span class="glyphicon glyphicon-plus"></span> Add Album</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-off"></span> Logout</a></li>
+        <li><a href="{% url 'music:new' %}"><span class="glyphicon glyphicon-plus"></span> Add Album</a></li>
+        <li><a href="{% url 'music:logout_user' %}"><span class="glyphicon glyphicon-off"></span> Logout</a></li>
       </ul>
     </div>
   </div>
