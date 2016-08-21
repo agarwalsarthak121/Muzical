@@ -3,24 +3,41 @@
 
 {% block body %}
 
+<table class="table table-striped">
+    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Album</th>
+                            <th>Audio File</th>
+                            <th>Favorite</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for album in album_list %}
 
-{% for album in album_list %}
+                        {% for song in album.song_set.all %}
+                            <tr>
+                                <td>{{ song.song_title }}</td>
+                                <td>
+                                    {{album.album_title}}
+                                </td>
+                                <td>
+                                    <a target="_blank" href="{{ song.audio_file.url }}">
+                                        <button type="button" class="btn btn-success btn-xs">
+                                            <span class="glyphicon glyphicon-play"></span>&nbsp; Play
+                                        </button>
+                                    </a>
+                                </td>
+								<td>
+									{% if song.is_favourite %}
+									<span class="glyphicon glyphicon-star"></span>
+									{% endif %}
+								</td>
 
-<div class="row" style="margin-top:15px">
-    <div class="col-md-4">
-    <h3 class="text-center" style="font-size:cursive">{{album.artist}}</h3>
-        </div>
-    <div class="col-md-4">
-        <img src="{{album.album_logo.url}}" class="img-rounded center-block" style="height:200px;width:200px">
-    </div>
-    <div class="col-md-4">
-{% for song in album.song_set.all %}
-    <ul>
-        <li style="font-size:18px">{{song.song_title}}</li>
-    </ul>
-{% endfor %}
-        </div>
-    </div>
-{% endfor %}
+                            </tr>
+                                              {% endfor %}
+                                          {% endfor %}
+                        </tbody>
 
+  </table>
 {% endblock %}

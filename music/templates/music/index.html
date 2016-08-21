@@ -1,8 +1,10 @@
 {% extends 'music/base.html' %}
 
 {% block body %}
+
 <div class="container-fluid">
-<ul>
+
+	{% if all_albums %}
 	<div class='row'>
 	{% for album in all_albums %}
 	<div class=col-md-4>
@@ -16,7 +18,9 @@
 	</div>
 	{% endfor %}
 	</div>
-</ul>
+	{% else %}
+	<h3>No Albums found. <a href="{% url 'music:new' %}">Create a new Album now</a></h3>
+	{% endif %}
 </div>
 	{% endblock %}
 

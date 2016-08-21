@@ -1,5 +1,5 @@
 from django import forms
-from .models import Album,Song
+from .models import Album,Song,Profile
 from django.contrib.auth.models import User
 
 class PostForm(forms.ModelForm):
@@ -20,3 +20,9 @@ class UserForm(forms.ModelForm):
     class Meta:
         model = User
         fields = ['username','email','password']
+
+class ProfileForm(forms.ModelForm):
+
+    class Meta:
+        model = Profile
+        fields = ['name','bio','location','image']

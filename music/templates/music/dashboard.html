@@ -1,0 +1,21 @@
+{% extends 'music/base.html' %}
+{% block title %}Dashboard{% endblock %}
+{% block profiles_active %}active{% endblock %}
+
+{% block body %}
+{% if not profiles %}
+<div class="container">
+    <h5>Profile Not created Yet</h5>
+    <p>Create profile</p>
+    <a href="{% url 'music:createProfile' %}" class="btn btn-default"><span class="glyphicon glyphicon-pencil"></span></a>
+</div>
+{% else %}
+{% for profile in profiles %}
+    <img src="{{profile.image.url}}" class="img-responsive img-circle center-block" style="height:300px;width:300px" />
+    <h3 class="text-center">{{profile.name}}</h3>
+    <h4 class="text-center">{{profile.bio}}</h4>
+    <h5 class="text-center">{{profile.location}}</h5>
+    <a href="{% url 'music:editProfile' profile.pk %}" class="btn btn-default center-block"><span class="glyphicon glyphicon-pencil"></span></a>
+{% endfor %}
+{% endif %}
+{% endblock %}

@@ -21,4 +21,14 @@ class Song(models.Model):
 	def __str__(self):
 		return self.song_title
 
+class Profile(models.Model):
+	user = models.ForeignKey(User, default=1)
+	name = models.CharField(max_length=100)
+	bio = models.TextField()
+	image = models.FileField()
+	location = models.CharField(max_length=100)
+
+	def __str__(self):
+		return self.name
+
 
