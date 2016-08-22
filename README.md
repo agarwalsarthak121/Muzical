@@ -21,7 +21,10 @@ Just download the zip file and extract it to to your home directory.After open t
 --> python3 manage.py runserver </br>
 
 Now go to this link - 127.0.0.1:8000/music <br/>
-<h3>You need to have Django and python installed on your pc.</h3>
+<h3>You need to have Django and python installed on your pc.</h3><br />
+
+Alternatively you can go to this <a href='agarwalsarthak121.pythonanywhere.com'>link</a> 
+
 
 ![alt tag](https://raw.githubusercontent.com/agarwalsarthak121/Muzical/master/screenshots/3.png)
 
